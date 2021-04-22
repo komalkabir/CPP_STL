@@ -31,9 +31,23 @@ int main()
 
     vector<int> id;
     if(id.empty()==true)                                //checks if vector is empty
-     cout<<"Vector is empty";                     
+     cout<<"Vector is empty"<<endl;                     
     else
      cout<<"Vector is not empty";
+
+    // erase() vs clear()
+
+    vector<int>::iterator ite;
+    id={1,2,3,4,5,6};
+
+    ite=id.begin();                   // erase() used to remove element at particular index
+    id.erase(++ite);                  //erases element at 1st position
+
+    for (auto i = id.begin(); i!= id.end(); i++)   
+        cout<<*i<<" ";
+
+    id.clear();                       // clear() removes all the elements
+    cout<<"\n"<<"All elements are removed as size is: "<<id.size();  
 
     return 0;
 }
