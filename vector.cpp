@@ -23,11 +23,11 @@ int main()
     // Initializing vector
     vector<string> name {"A","B","C","D","E"};
 
-    cout<<"\n"<<"Vector size: "<<name.size();            //returns size of vector
-    cout<<"\n"<<"Vector max_size: "<<name.max_size();    //returns maximum no. of elements vector can store
-    cout<<"\n"<<"Vector capacity: "<<name.capacity();    //returns current space allocated
+    cout<<"\nVector size: "<<name.size();            //returns size of vector
+    cout<<"\nVector max_size: "<<name.max_size();    //returns maximum no. of elements vector can store
+    cout<<"\nVector capacity: "<<name.capacity();    //returns current space allocated
     name.resize(3);
-    cout<<"\n"<<"Vector resized to: "<<name.size()<<"\n";      // vector is resized from 5 to 3
+    cout<<"\nVector resized to: "<<name.size()<<"\n";      // vector is resized from 5 to 3
 
     vector<int> id;
     if(id.empty()==true)                                //checks if vector is empty
@@ -47,30 +47,30 @@ int main()
         cout<<*i<<" ";
 
     id.clear();                       // clear() removes all the elements
-    cout<<"\n"<<"All elements are removed as size is: "<<id.size()<<"\n";  
+    cout<<"\nAll elements are removed as size is: "<<id.size()<<"\n";  
 
     vector<int> roll;
 
     roll.assign(5,20);     //fill the array with value=20, five times
 
-    cout<<"\n"<<"Roll values: ";
+    cout<<"\nRoll values: ";
     for (auto i = roll.begin(); i!= roll.end(); i++)   
         cout<<*i<<" ";
     
     roll.push_back(30);              //push_back() inserts elements from back
     roll.push_back(40);
-    cout<<"\n"<<"After push_back(): ";
+    cout<<"\nAfter push_back(): ";
      for (auto i = roll.begin(); i!= roll.end(); i++)   
         cout<<*i<<" ";
 
     roll.pop_back();                 //pop_back() removes element from back
-    cout<<"\n"<<"After pop_back(): ";
+    cout<<"\nAfter pop_back(): ";
     for (auto i = roll.begin(); i!= roll.end(); i++)   //Last element is removed
         cout<<*i<<" ";
     
 
     roll.insert(roll.begin()+2,45);            //inserts value before the given position
-    cout<<"\n"<<"Value is inserted at 2nd index: ";
+    cout<<"\nValue is inserted at 2nd index: ";
       for (auto i = roll.begin(); i!= roll.end(); i++)   
         cout<<*i<<" ";
 
@@ -80,17 +80,21 @@ int main()
 
     num1.swap(num2);                            //swapping values of num1 with num2;
      for (auto i = num1.begin(), j=num2.begin(); i!= num1.end(); i++,j++)   
-        cout<<"\n"<<"num1:"<<*i<<" "<<"num2:"<<*j<<" ";
+        cout<<"\nnum1:"<<*i<<" "<<"num2:"<<*j<<" ";
 
     
     //emplace() and emplace_back()
 
     num1.emplace(num1.begin()+3,100);           //inserts value at given position
     num2.emplace_back(200);                     //inserts value at end of vector
-       
-    cout<<"\n"<<"num1 after using emplace():"<<num1.at(2)<<" "<<num1.at(3)<<" "<<num1.at(4);
-    cout<<"\n"<<"num2 last element:"<<num2.back();
 
+       cout<<"\nnum1 values: ";
+   for (auto i = num1.begin(); i!= num1.end(); i++)     
+        cout<<*i<<" ";
+
+       cout<<"\nnum2 values: ";
+   for (auto i = num2.begin(); i!= num2.end(); i++)     
+        cout<<*i<<" ";
     
     return 0;
 }
