@@ -24,7 +24,7 @@ int main()
     //map functions:
     //erase(), clear(), find(), size(), max_size(), at(), empt()
 
-    cout<<num.at(5)<<endl;    // prints value associated with key 5
+    cout<<"Value at key 5: "<<num.at(5)<<endl;    // prints value associated with key 5
                               // throws exception is key not present
 
     cout<<"Size: "<<num.size()<<"\n"
@@ -59,6 +59,6 @@ int main()
     {
         cout<<i->first<<" \t"<<i->second<<endl;
     }
-    
+
     return 0;
 }
